@@ -38,20 +38,13 @@ function proxy(req, res) {
         if (shouldCompress(req, buffer)) {
             isMediaStream = false
             compress(req, res, buffer)
-        } else if (originType.startsWith('video') || originType.startsWith('audio')){
-        //  reEncode(req, res, buffer)
+        }
         } else {
             bypass(req, res, buffer)
         }
       }
     }
-  ).on('response', function(response) {
-    let originType = response.headers['content-type'] || ''
-    if (originType.startsWith('video') || originType.startsWith('audio')){
-        isMediaStream = true
-        reEncode(req, res)
-      }
-  }).on('error', function(err) {
+  ).on('error', function(err) {
     console.error(err)
     return redirect(req, res)
   })
