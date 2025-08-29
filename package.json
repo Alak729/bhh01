@@ -10,16 +10,12 @@
     "start": "node index.js"
   },
   "dependencies": {
-    "@ffmpeg-installer/ffmpeg": "^1.0.20",
-    "@ffprobe-installer/ffprobe": "^1.0.12",
-    "basic-auth": "^2.0.1",
-    "express": "4.17.1",
+    "express": "4.21.2",
     "lodash": "^4.17.21",
-    "request": "^2.88.0",
+    "request": "^2.88.2",
     "sharp": "^0.34.x"
     "is-animated": "^1.1.1",
-    "gif2webp-bin": "^2.0.0",
-    "fluent-ffmpeg": "^2.1.2",
+    "gif2webp-bin": "^2.0.0"
   },
   "engines": {
     "node": "22.x"
